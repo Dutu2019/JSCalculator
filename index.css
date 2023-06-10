@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  width: fit-content;
+  height: auto;
+  margin: auto;
+}
+
+.outputs {
+  background-color: black;
+  height: 10vw;
+}
+
+.secondary {
+}
+
+.primary {
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+.button {
+  min-width: 10vw;
+  height: 10vw;
+  font-size: 2rem;
+}
+
+.button.equals {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
