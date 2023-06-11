@@ -1,25 +1,40 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
 .container {
+  position: relative;
+  display: grid;
   grid-template-columns: 10vw 10vw 10vw 10vw;
   grid-template-rows: 10vw 10vw 10vw 10vw 10vw;
   width: fit-content;
   height: fit-content;
-  position: relative;
-  width: fit-content;
-  height: auto;
   margin: auto;
-  display: grid;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .outputs {
-  background-color: black;
+  position: relative;
   height: 10vw;
   grid-column: 1 / 5;
+  border-bottom: 2px solid black;
 }
 
 .secondary {
+  height: 30%;
 }
 
 .primary {
+  height: 70%;
+  text-align: right;
+  font-size: 2rem;
+  padding: 10% 0;
 }
 
 .button {
@@ -27,11 +42,17 @@
   height: 100%;
   font-size: 2rem;
   background-color: transparent;
+  border: none;
+  user-select: none;
   transition: 0.2s;
 }
 
 .button:hover {
-  background-color: aqua;
+  background-color: magenta;
+}
+
+.button:active {
+  border: 1px solid black;
 }
 
 .button.equals {
