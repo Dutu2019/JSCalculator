@@ -1,25 +1,16 @@
-class Calculator {
-    constructor() {
-        this.primaryOut = [];
-        this.secondaryOut = [];
-        this.result = 0;
-    }
+export default class Calculator {
+  constructor() {}
 
-    calculate() {
-        this.result = eval(this.primaryOut.join(undefined));
+  calculate(list) {
+    try {
+      let equation = list.map((el) => {
+        if (el == "x") return "*";
+        else if (el == "=") return "";
+        else return el;
+      });
+      return eval(equation.join(""));
+    } catch (e) {
+      return "Error";
     }
-
-
-    appendOut(char) {
-        this.primaryOut.push(char);
-    }
-    
-    clear() {
-        this.primaryOut = [];
-        this.secondaryOut = [];
-    }
-    
-    updateOut() {
-        return this.primaryOut;
-    }
+  }
 }
